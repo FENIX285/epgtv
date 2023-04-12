@@ -1349,8 +1349,6 @@ function file_image(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
 
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
-  </div>
   </div>
   </div>
     `;
@@ -1500,18 +1498,3 @@ $(function() {
 
     render(path);
 });
-
-// Copy to Clipboard for Direct Links, This will be modified soon with other UI
-function copyFunction() {
-    var copyText = document.getElementById("dlurl");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied";
-}
-
-function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy";
-}
